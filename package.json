@@ -8,11 +8,16 @@
     "start": "next start",
     "lint": "eslint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:db": "node scripts/test-mongodb.js",
+    "test:groq": "node scripts/test-groq.js"
   },
   "dependencies": {
     "axios": "^1.13.4",
+    "dotenv": "^17.2.3",
     "framer-motion": "^12.29.2",
+    "groq-sdk": "^0.7.0",
+    "mongodb": "^7.0.0",
     "mongoose": "^9.1.5",
     "next": "16.1.6",
     "react": "19.2.3",

@@ -6,6 +6,7 @@ interface InputProps {
   label?: string;
   id?: string;
   className?: string;
+  onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
 export default function Input({
@@ -16,6 +17,7 @@ export default function Input({
   label,
   id,
   className = '',
+  onKeyPress,
 }: InputProps) {
   const inputId = id || `input-${type}`;
   
@@ -37,6 +39,7 @@ export default function Input({
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onKeyPress={onKeyPress}
         className={baseClasses}
       />
     </div>

@@ -12,7 +12,7 @@ interface WeakConceptsListProps {
 export default function WeakConceptsList({ concepts }: WeakConceptsListProps) {
   const router = useRouter();
 
-  const handleFixNow = (conceptId: string) => {
+  const handleFixNow = (conceptId: string | number) => {
     router.push(`/remediation?concept=${conceptId}`);
   };
 

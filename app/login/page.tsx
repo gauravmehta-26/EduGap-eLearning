@@ -17,7 +17,13 @@ export default function LoginPage() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (isValidEmail(email) && password.length > 0) {
-      router.push('/profile');
+      // Check if user has already personalized
+      const hasPersonalized = localStorage.getItem('userPreferences');
+      if (hasPersonalized) {
+        router.push('/profile');
+      } else {
+        router.push('/personalize');
+      }
     }
   };
 
