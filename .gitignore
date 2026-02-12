@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# documentation files
+*_SETUP.md
+*_COMPLETE.md
+*_INTEGRATION.md
+HACKATHON_*.md
+DOCUMENTATION_INDEX.md
+LOCALHOST_SETUP.md
+INTEGRATION_STATUS.md
